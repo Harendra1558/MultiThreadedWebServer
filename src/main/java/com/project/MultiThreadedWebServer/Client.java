@@ -12,7 +12,7 @@ import java.net.Socket;
 
 public class Client {
 
-    private static final int PORT = 8010; // The server port to connect to
+    private static final int PORT = 8080; // The server port to connect to
     private static final String HOST = "localhost"; // The server host (localhost in this case)
 
     // Logger to log messages for various actions within the Client class
@@ -27,7 +27,7 @@ public class Client {
         Client client = new Client();
 
         // Create and start a new thread to handle client-server communication
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1000; i++) {
             try {
                 Thread thread = new Thread(client.getRunnable());
                 thread.start();

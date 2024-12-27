@@ -134,7 +134,7 @@ public class WebServer {
                 try {
                     // Accept new client connections
                     Socket clientSocket = serverSocket.accept();
-                    System.out.println("New client connected: " + clientSocket.getInetAddress());
+                    logger.info("New client connected: {}", clientSocket.getInetAddress());
                     serverSocket.setSoTimeout(900000); // Timeout for server socket
 
                     // Handle client request in a separate thread
